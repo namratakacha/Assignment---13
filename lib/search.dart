@@ -9,13 +9,26 @@ class searchBar extends StatefulWidget {
 }
 
 class _searchBarState extends State<searchBar> {
+  TextEditingController _searchctrl = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _searchctrl.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(15),
       child: Column(
         children: [
-          CupertinoSearchTextField(),
+          CupertinoSearchTextField(controller: _searchctrl),
         ],
       ),
     );

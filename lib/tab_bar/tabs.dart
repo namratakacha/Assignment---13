@@ -220,6 +220,7 @@ class _Tab2State extends State<Tab2> {
                   style: TextStyle(fontSize: 22),
                 ),
                 CupertinoTextFormFieldRow(
+                  controller: _emailctrl,
                   validator: (String? v) {
                     if ((v ?? '').isEmpty) {
                       return 'Please Enter Email';
@@ -243,6 +244,7 @@ class _Tab2State extends State<Tab2> {
                   ),
                 ),
                 CupertinoTextFormFieldRow(
+                  controller: _mobilectrl,
                   validator: (String? v) {
                     if ((v ?? '').isEmpty) {
                       return 'Please Enter Mobile Number';
@@ -266,6 +268,7 @@ class _Tab2State extends State<Tab2> {
                   ),
                 ),
                 CupertinoTextFormFieldRow(
+                  controller: _pwdctrl,
                   maxLength: 8,
                   validator: (String? v) {
                     if ((v ?? '').isEmpty) {
